@@ -1,8 +1,28 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Web App Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px grey;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #454545;
+            border-radius: 2px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #212121;
+        }
+
         * {
             font-family: Tahoma;
         }
@@ -34,9 +54,9 @@
             z-index: 6000;
         }
 
-            #imagination_right_border:hover {
-                width: 125px;
-            }
+        #imagination_right_border:hover {
+            width: 125px;
+        }
 
         .rotate_text_holder {
             margin-top: 30px;
@@ -45,122 +65,122 @@
             position: relative;
         }
 
-            .rotate_text_holder div {
-                transform: rotateZ(90deg);
-                -ms-transform: rotateZ(90deg);
-                -moz-transform: rotateZ(90deg);
-                -webkit-transform: rotateZ(90deg);
-                margin-top: 50px;
-                padding-bottom: 3px;
-            }
+        .rotate_text_holder div {
+            transform: rotateZ(90deg);
+            -ms-transform: rotateZ(90deg);
+            -moz-transform: rotateZ(90deg);
+            -webkit-transform: rotateZ(90deg);
+            margin-top: 50px;
+            padding-bottom: 3px;
+        }
 
-                .rotate_text_holder div:hover {
-                    transition: ease-in 300ms;
-                    -o-transition: ease-in 300ms;
-                    -moz-transition: ease-in 300ms;
-                    -webkit-transition: ease-in 300ms;
-                }
+        .rotate_text_holder div:hover {
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+        }
 
-                .rotate_text_holder div a {
-                    text-decoration: none;
-                    color: white;
-                }
+        .rotate_text_holder div a {
+            text-decoration: none;
+            color: white;
+        }
 
-                    .rotate_text_holder div a:hover {
-                        transition: ease-in 300ms;
-                        -o-transition: ease-in 300ms;
-                        -moz-transition: ease-in 300ms;
-                        -webkit-transition: ease-in 300ms;
-                        color: red;
-                    }
+        .rotate_text_holder div a:hover {
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+            color: red;
+        }
 
-            .rotate_text_holder label {
-                transition: ease-in 300ms;
-                -o-transition: ease-in 300ms;
-                -moz-transition: ease-in 300ms;
-                -webkit-transition: ease-in 300ms;
-                border-radius: 45px 45px;
-                -moz-border-radius: 45px;
-                -webkit-border-radius: 45px 45px;
-                position: absolute;
-                left: 42px;
-                height: 70px;
-                width: 70px;
-                text-align: center;
-                z-index: 9100;
-            }
+        .rotate_text_holder label {
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+            border-radius: 45px 45px;
+            -moz-border-radius: 45px;
+            -webkit-border-radius: 45px 45px;
+            position: absolute;
+            left: 42px;
+            height: 70px;
+            width: 70px;
+            text-align: center;
+            z-index: 9100;
+        }
 
-                .rotate_text_holder label:hover {
-                    background-color: green;
-                }
+        .rotate_text_holder label:hover {
+            background-color: green;
+        }
 
-                    .rotate_text_holder label:hover a {
-                        width: 60px;
-                        height: 60px;
-                        top: 5px;
-                        left: 5px;
-                        opacity: 0.8;
-                        line-height: 55px;
-                        font-weight: bold;
-                        font-size: xx-large;
-                        transform: rotateZ(360deg);
-                        -ms-transform: rotateZ(360deg);
-                        -moz-transform: rotateZ(360deg);
-                        -webkit-transform: rotateZ(360deg);
-                    }
+        .rotate_text_holder label:hover a {
+            width: 60px;
+            height: 60px;
+            top: 5px;
+            left: 5px;
+            opacity: 0.8;
+            line-height: 55px;
+            font-weight: bold;
+            font-size: xx-large;
+            transform: rotateZ(360deg);
+            -ms-transform: rotateZ(360deg);
+            -moz-transform: rotateZ(360deg);
+            -webkit-transform: rotateZ(360deg);
+        }
 
-                .rotate_text_holder label a {
-                    width: 70px;
-                    height: 70px;
-                    border-radius: 45px 45px;
-                    -moz-border-radius: 45px;
-                    -webkit-border-radius: 45px 45px;
-                    transition: ease-in 300ms;
-                    -o-transition: ease-in 300ms;
-                    -moz-transition: ease-in 300ms;
-                    -webkit-transition: ease-in 300ms;
-                    background-color: #ffffff;
-                    text-decoration: none;
-                    vertical-align: central;
-                    position: absolute;
-                    top: 0px;
-                    left: 0px;
-                    opacity: 0.3;
-                    line-height: 65px;
-                    z-index: 9200;
-                    font-weight: bold;
-                    font-size: x-large;
-                }
+        .rotate_text_holder label a {
+            width: 70px;
+            height: 70px;
+            border-radius: 45px 45px;
+            -moz-border-radius: 45px;
+            -webkit-border-radius: 45px 45px;
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+            background-color: #ffffff;
+            text-decoration: none;
+            vertical-align: central;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: 0.3;
+            line-height: 65px;
+            z-index: 9200;
+            font-weight: bold;
+            font-size: x-large;
+        }
 
-                .rotate_text_holder label span {
-                    overflow: hidden;
-                    width: 0px;
-                    transition: ease-in 300ms;
-                    -o-transition: ease-in 300ms;
-                    -moz-transition: ease-in 300ms;
-                    -webkit-transition: ease-in 300ms;
-                    display: inline-block;
-                    height: 70px;
-                    position: absolute;
-                    left: 70px;
-                    top: 0px;
-                    border-radius: 45px 45px;
-                    -moz-border-radius: 45px;
-                    -webkit-border-radius: 45px 45px;
-                    opacity: 0;
-                }
+        .rotate_text_holder label span {
+            overflow: hidden;
+            width: 0px;
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+            display: inline-block;
+            height: 70px;
+            position: absolute;
+            left: 70px;
+            top: 0px;
+            border-radius: 45px 45px;
+            -moz-border-radius: 45px;
+            -webkit-border-radius: 45px 45px;
+            opacity: 0;
+        }
 
-                .rotate_text_holder label:hover span {
-                    overflow: hidden;
-                    width: 300px;
-                    left: -230px;
-                    z-index: 9000;
-                    opacity: .8;
-                    line-height: 70px;
-                    color: white;
-                    font-weight: bold;
-                    font-size: large;
-                }
+        .rotate_text_holder label:hover span {
+            overflow: hidden;
+            width: 300px;
+            left: -230px;
+            z-index: 9000;
+            opacity: .8;
+            line-height: 70px;
+            color: white;
+            font-weight: bold;
+            font-size: large;
+        }
 
         #main_table {
             width: 100%;
@@ -219,47 +239,47 @@
             -webkit-transition: ease-out 400ms;
         }
 
-            .left_link:hover {
-                line-height: 100px;
-            }
+        .left_link:hover {
+            line-height: 100px;
+        }
 
-                .left_link:hover label {
-                    height: 30px;
-                }
+        .left_link:hover label {
+            height: 30px;
+        }
 
-            .left_link label {
-                width: 250px;
-                height: 2px;
-                line-height: 30px;
-                position: absolute;
-                top: 0px;
-                left: 0px;
-                opacity: .5;
-                background-color: #f1f1f1;
-                overflow: hidden;
-                transition: ease-in 400ms;
-                -o-transition: ease-in 400ms;
-                -moz-transition: ease-in 400ms;
-                -webkit-transition: ease-in 400ms;
-            }
+        .left_link label {
+            width: 250px;
+            height: 2px;
+            line-height: 30px;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            opacity: .5;
+            background-color: #f1f1f1;
+            overflow: hidden;
+            transition: ease-in 400ms;
+            -o-transition: ease-in 400ms;
+            -moz-transition: ease-in 400ms;
+            -webkit-transition: ease-in 400ms;
+        }
 
-                .left_link label:hover {
-                    background-color: black;
-                }
+        .left_link label:hover {
+            background-color: black;
+        }
 
-            .left_link a {
-                text-decoration: none;
-                color: #363636;
-                transition: ease-in 300ms;
-                -o-transition: ease-in 300ms;
-                -moz-transition: ease-in 300ms;
-                -webkit-transition: ease-in 300ms;
-            }
+        .left_link a {
+            text-decoration: none;
+            color: #363636;
+            transition: ease-in 300ms;
+            -o-transition: ease-in 300ms;
+            -moz-transition: ease-in 300ms;
+            -webkit-transition: ease-in 300ms;
+        }
 
-                .left_link a:hover {
-                    text-decoration: none;
-                    color: #ffffff;
-                }
+        .left_link a:hover {
+            text-decoration: none;
+            color: #ffffff;
+        }
 
         #left_menu_fr {
             background-color: #f1f1f1;
@@ -291,45 +311,45 @@
             border: 1px solid #909090;
         }
 
-            .left_box img {
-                width: 67px;
-                height: 67px;
-            }
+        .left_box img {
+            width: 67px;
+            height: 67px;
+        }
 
-            .left_box label {
-                height: 25px;
-                width: 67px;
-                opacity: .5;
-                line-height: 25px;
-                overflow: hidden;
-                top: 67px;
-                left: 0px;
-                position: absolute;
-                background-color: gray;
-                transition: ease-out 400ms;
-                -o-transition: ease-out 400ms;
-                -moz-transition: ease-out 400ms;
-                -webkit-transition: ease-out 400ms;
-            }
+        .left_box label {
+            height: 25px;
+            width: 67px;
+            opacity: .5;
+            line-height: 25px;
+            overflow: hidden;
+            top: 67px;
+            left: 0px;
+            position: absolute;
+            background-color: gray;
+            transition: ease-out 400ms;
+            -o-transition: ease-out 400ms;
+            -moz-transition: ease-out 400ms;
+            -webkit-transition: ease-out 400ms;
+        }
 
-            .left_box:hover label {
-                top: 42px;
-                opacity: .8;
-            }
+        .left_box:hover label {
+            top: 42px;
+            opacity: .8;
+        }
 
-            .left_box label a {
-                text-decoration: none;
-                color: black;
-                transition: ease-out 200ms;
-                -o-transition: ease-out 200ms;
-                -moz-transition: ease-out 200ms;
-                -webkit-transition: ease-out 200ms;
-            }
+        .left_box label a {
+            text-decoration: none;
+            color: black;
+            transition: ease-out 200ms;
+            -o-transition: ease-out 200ms;
+            -moz-transition: ease-out 200ms;
+            -webkit-transition: ease-out 200ms;
+        }
 
-            .left_box:hover label a {
-                text-decoration: none;
-                color: white;
-            }
+        .left_box:hover label a {
+            text-decoration: none;
+            color: white;
+        }
 
         #right_menu_post {
             width: 100%;
@@ -353,18 +373,18 @@
             -webkit-transition: ease-in 200ms;
         }
 
-            .post_body:hover {
-                background-color: white;
-                box-shadow: 0px 2px 7px #888888;
-                -moz-box-shadow: 0px 2px 7px #888888;
-                -webkit-box-shadow: 0px 2px 7px #888888;
-            }
+        .post_body:hover {
+            background-color: white;
+            box-shadow: 0px 2px 7px #888888;
+            -moz-box-shadow: 0px 2px 7px #888888;
+            -webkit-box-shadow: 0px 2px 7px #888888;
+        }
 
-                .post_body:hover .post_title {
-                    /*top: -60px;*/
-                    /*right:600px;*/
-                    right: 350px;
-                }
+        .post_body:hover .post_title {
+            /*top: -60px;*/
+            /*right:600px;*/
+            right: 350px;
+        }
 
         .post_more {
             transition: ease-in 300ms;
@@ -385,14 +405,14 @@
             text-align: center;
         }
 
-            .post_more a {
-                text-decoration: none;
-                color: #888888;
-            }
+        .post_more a {
+            text-decoration: none;
+            color: #888888;
+        }
 
-            .post_more:hover {
-                background-color: #ffea00;
-            }
+        .post_more:hover {
+            background-color: #ffea00;
+        }
 
         .post_title {
             position: absolute;
@@ -406,7 +426,8 @@
             cursor: pointer;
         }
 
-        .post_title_left, .tri_left {
+        .post_title_left,
+        .tri_left {
             position: absolute;
             top: -1px;
             left: 2px;
@@ -429,7 +450,9 @@
             -webkit-transform: rotateZ(210deg);
         }
 
-        .post_title_right, .tri_right, .tri_down {
+        .post_title_right,
+        .tri_right,
+        .tri_down {
             position: absolute;
             top: -1px;
             left: 298px;
@@ -492,7 +515,8 @@
             top: 33px;
         }
 
-        .tri_left, .tri_left_ {
+        .tri_left,
+        .tri_left_ {
             left: 0px;
             top: -1px;
             position: absolute;
@@ -515,7 +539,8 @@
             -webkit-transform: rotateZ(210px);
         }
 
-        .tri_right, .tri_right_ {
+        .tri_right,
+        .tri_right_ {
             left: 6px;
             top: -1px;
             position: absolute;
@@ -538,7 +563,8 @@
             -webkit-transform: rotateZ(-30deg);
         }
 
-        .tri_down, .tri_down_ {
+        .tri_down,
+        .tri_down_ {
             left: 3px;
             top: 5px;
             position: absolute;
@@ -561,7 +587,9 @@
             -webkit-transform: rotateZ(90deg);
         }
 
-        .dt, .ut, .ct {
+        .dt,
+        .ut,
+        .ct {
             right: -35px;
             top: 10px;
             position: absolute;
@@ -575,10 +603,10 @@
             -webkit-transition: ease-in 300ms;
         }
 
-            .dt:hover {
-                top: 0px;
-                cursor: pointer;
-            }
+        .dt:hover {
+            top: 0px;
+            cursor: pointer;
+        }
 
         .ct {
             color: white;
@@ -591,9 +619,9 @@
             -webkit-transition: ease-in 300ms;
         }
 
-            .ct:hover {
-                top: 45px;
-            }
+        .ct:hover {
+            top: 45px;
+        }
 
         .ut {
             transform: rotateZ(180deg);
@@ -608,10 +636,10 @@
             -webkit-transition: ease-in 300ms;
         }
 
-            .ut:hover {
-                cursor: pointer;
-                top: 120px;
-            }
+        .ut:hover {
+            cursor: pointer;
+            top: 120px;
+        }
 
         .tri_left_ {
             top: 0px;
@@ -649,7 +677,9 @@
             -webkit-transform: rotateZ(90deg);
         }
 
-        .up_tri_txt, .dn_tri_txt, .tm_tri_txt {
+        .up_tri_txt,
+        .dn_tri_txt,
+        .tm_tri_txt {
             position: absolute;
             z-index: 3000;
             font-size: x-large;
@@ -698,16 +728,17 @@
             opacity: .8;
         }
 
-            #avatar:hover {
-                opacity: 1;
-            }
+        #avatar:hover {
+            opacity: 1;
+        }
 
-                #avatar:hover #face, #avatar:hover #bod {
-                    background-color: white;
-                    box-shadow: 0px 0px 40px #00a9ff;
-                    -moz-box-shadow: 0px 0px 40px #00a9ff;
-                    -webkit-box-shadow: 0px 0px 40px #00a9ff;
-                }
+        #avatar:hover #face,
+        #avatar:hover #bod {
+            background-color: white;
+            box-shadow: 0px 0px 40px #00a9ff;
+            -moz-box-shadow: 0px 0px 40px #00a9ff;
+            -webkit-box-shadow: 0px 0px 40px #00a9ff;
+        }
 
         #face {
             border-radius: 45px 45px;
@@ -786,32 +817,32 @@
             -webkit-transform: rotateZ(40deg);
         }
 
-            .btn:hover {
-                cursor: pointer;
-                transform: rotateZ(360deg);
-                -ms-transform: rotateZ(360deg);
-                -moz-transform: rotateZ(360deg);
-                -webkit-transform: rotateZ(360deg);
-                width: 60px;
-                height: 60px;
-            }
+        .btn:hover {
+            cursor: pointer;
+            transform: rotateZ(360deg);
+            -ms-transform: rotateZ(360deg);
+            -moz-transform: rotateZ(360deg);
+            -webkit-transform: rotateZ(360deg);
+            width: 60px;
+            height: 60px;
+        }
 
-            .btn label {
-                position: absolute;
-                top: 55px;
-                left: 0px;
-                transition: ease-out 500ms;
-                -o-transition: ease-out 500ms;
-                -moz-transition: ease-out 500ms;
-                -webkit-transition: ease-out 500ms;
-            }
+        .btn label {
+            position: absolute;
+            top: 55px;
+            left: 0px;
+            transition: ease-out 500ms;
+            -o-transition: ease-out 500ms;
+            -moz-transition: ease-out 500ms;
+            -webkit-transition: ease-out 500ms;
+        }
 
-            .btn:hover label {
-                top: -30px;
-                left: 50px;
-                font-weight: bold;
-                font-size: large;
-            }
+        .btn:hover label {
+            top: -30px;
+            left: 50px;
+            font-weight: bold;
+            font-size: large;
+        }
 
         .tn {
             position: absolute;
@@ -847,6 +878,7 @@
 
     </script>
 </head>
+
 <body>
     <table id="main_table">
         <tr>
@@ -1197,4 +1229,5 @@
         </tr>
     </table>
 </body>
+
 </html>
