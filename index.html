@@ -18,6 +18,15 @@
     <!-- <link rel="shortcut icon" href="/fav"> -->
     <meta name="msapplication-TileColor" content="royalblue">
     <link href="index.css" rel="stylesheet" />
+
+    <style type="text/css">
+        @-ms-viewport {
+            width: auto !important;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="lib/glider.css" />
+    <script src="lib/glider.js"></script>
+    <script src="lib/jquery-3.5.1.min.js"></script>
 </head>
 
 <body>
@@ -31,37 +40,83 @@
             <menu-item class="active">Home</menu-item>
             <menu-item>About</menu-item>
             <menu-item>Projects</menu-item>
-            <menu-item>Catalogs</menu-item>
-            <menu-item>FAQ</menu-item>
             <menu-item>Invoice</menu-item>
+            <call>
+                <a href="tel:+0000000000000"><span>Call</span><label> +00-000-0000000</label></a>
+            </call>
         </container>
     </menu>
     <container>
+    </container>
+    <slider>
+        <div class="glider">
+            <div class="glider-image-holder"><img class="glider-image" alt="Test" src="image/image1.jpg"></div>
+            <div class="glider-image-holder"><img class="glider-image" alt="Test" src="image/image2.jpg"></div>
+            <div class="glider-image-holder"><img class="glider-image" alt="Test" src="image/image3.jpg"></div>
+        </div>
+        <button class="glider-btn glider-prev">&laquo;</button>
+        <button class="glider-btn glider-next">&raquo;</button>
 
-        <slider>
-
-        </slider>
+        <div id="dots"></div>
+    </slider>
+    <container>
         <page>
             <h2>Home <span class="active">Page</span></h2>
         </page>
         <content>
             <h3>Title</h3>
-            <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
-            <br/>
+            <p>Lorem ipsum dolor sit amet, tota ceteros ei ius, nam augue accusam epicuri id. Ad cibo soluta sed. Movet intellegam his at. Ex vel erant phaedrum sensibus, nec no illud simul constituto, te porro minimum ius. An per tantas luptatum accusamus,
+                modo ornatus elaboraret quo ea.</p>
+            <br />
             <h3>Title</h3>
-            <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
-            <br/>
+            <p>No has natum saperet lobortis, ut vim error menandri omittantur, mei nullam scriptorem contentiones te. Justo tollit mel in. Ornatus quaestio scribentur et eum, his ceteros definitionem interpretaris no. Tota ponderum maluisset duo no.</p><br
+            />
             <h3>Title</h3>
-            <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
-            <br/>
+            <p>Alii ludus signiferumque ea mea, erat aperiam aperiri ius et, usu diam dicat invidunt an. At molestiae cotidieque has. Eum deleniti similique no, no usu stet ullum suavitate. Ea nam epicuri inimicus scribentur, id nemore delectus qui.</p><br
+            />
             <h3>Title</h3>
-            <p>Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </p>
-            <br/>
+            <p>No tibique sapientem eam. Eos ex oratio dolorum. Cibo vocent efficiendi mea no. Sed et ipsum alienum epicuri. In per decore eruditi. Cum amet munere ut, at inani nobis delicata est. Qui luptatum verterem id, fugit atqui corpora cu cum. No
+                eos nisl solum tollit, te mei erat diceret inciderint, ipsum sapientem quaerendum in mel. Laboramus mnesarchum philosophia eu duo. Accumsan conclusionemque sed ad. Autem maiorum apeirian ad pro. Vix cu tempor alienum apeirian, ei pro odio
+                unum diceret. No sit partem tamquam labores. No mea erant noster petentium, ei melius eripuit suavitate usu. Per eu audiam percipitur suscipiantur, dicat definitiones sed ne. Ius et natum persequeris, possit cetero ne per. In enim essent
+                ponderum duo, ne summo convenire disputationi usu, eam liber cotidieque te. Erant affert facilis eam id, mundi aliquid per at, quo ne scripserit concludaturque. Essent moderatius mel no, cibo urbanitas an vim, simul congue feugiat no vix.
+                Ius at tota insolens sapientem, id usu velit consectetuer, solet quando et has. Putent fierent persequeris mei et, facer comprehensam necessitatibus per ut.
+            </p>
+            <br />
         </content>
     </container>
     <footer>
 
     </footer>
 </body>
+<script>
+    new Glider(document.querySelector('.glider'), {
+        slidesToShow: 1,
+        dots: '#dots',
+        draggable: true,
+        arrows: {
+            prev: '.glider-prev',
+            next: '.glider-next'
+        }
+    });
+
+    function resize() {
+        $(".glider-image").each(function(i, e) {
+            e = $(e);
+
+            e.css({
+                "top": e.parent().height() / 2 - e.height() / 2,
+                "left": e.parent().width() / 2 - e.width() / 2,
+            });
+        });
+    }
+
+    $(document).ready(function() {
+        resize();
+    });
+
+    $(window).resize(function() {
+        resize();
+    });
+</script>
 
 </html>

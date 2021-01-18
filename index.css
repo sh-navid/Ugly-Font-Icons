@@ -1,99 +1,181 @@
-@font-face{
-    font-family:"bFnt";
-    src:url("font/Sansation_Bold.ttf");
+@font-face {
+    font-family: "bFnt";
+    src: url("font/Sansation_Bold.ttf");
 }
 
-@font-face{
-    font-family:"lFnt";
-    src:url("font/Sansation_Light.ttf");
-}
-
-*{
+@font-face {
     font-family: "lFnt";
-    padding:0;
-    margin:0;
+    src: url("font/Sansation_Light.ttf");
 }
 
-h1,h2,h3,h4,h5,h6,menu-item,.active{
+* {
+    font-family: "lFnt";
+    padding: 0;
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+menu-item,
+.active,
+call * {
     font-family: "bFnt";
 }
 
-header{
+header {
     display: block;
     height: 5em;
     line-height: 5em;
-    color:white;
+    color: white;
     background-color: royalblue;
     border-bottom: .1em solid papayawhip;
 }
 
-container{
+container {
     max-width: 1024px;
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
 }
 
-menu{
+menu {
     display: block;
     min-height: 3em;
     line-height: 3em;
     background-color: whitesmoke;
 }
 
-menu-item{
-    color:#212121;
+menu-item {
+    color: #212121;
     padding-left: .5em;
     padding-right: .5em;
     cursor: pointer;
     transition: color 300ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-menu-item:hover{
-    color:royalblue !important;
+menu-item:hover {
+    color: royalblue !important;
 }
 
-.active{
-    color:teal;
+.active {
+    color: teal;
 }
 
-slider{
+slider {
     display: block;
     height: 25em;
-    background-color:royalblue;
+    /* background-color: royalblue; */
+    background-color: whitesmoke;
+    position: relative;
 }
 
-page{
+page {
     background-color: whitesmoke;
     height: 4em;
     line-height: 4em;
     display: block;
     padding-left: .5em;
-    padding-right:.5em;
+    padding-right: .5em;
     border-bottom: .15em solid teal;
 }
 
-content{
+content {
     background-color: whitesmoke;
-    padding:2em;
+    padding: 2em;
     display: block;
     min-height: 10em;
 }
 
-p{
-   text-align: justify;
-   word-spacing: .1em;
-   padding-top: .5em;
+p {
+    text-align: justify;
+    word-spacing: .1em;
+    padding-top: .5em;
+    font-weight: 800;
+    color: teal;
+    line-height: 1.5em;
 }
 
-footer{
+footer {
     background-color: teal;
     display: block;
-    height:7em;
+    height: 7em;
 }
 
-@media only screen and (max-width:700px){
-    header{
+.glider-btn {
+    color: whitesmoke !important;
+    opacity: .3 !important;
+    font-size: 10em !important;
+    padding-left: .2em !important;
+    padding-right: .2em !important;
+    top: 25% !important;
+    position: absolute !important;
+}
+
+.glider-btn:hover {
+    color: white !important;
+    opacity: .5 !important;
+}
+
+.glider,
+.glider-draggable,
+.glider-track {
+    width: 100%;
+    height: 100%;
+}
+
+.glider-image-holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.glider-image {
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+call {
+    height: 3em;
+    line-height: 3em;
+    padding-left: .5em;
+    padding-right: .5em;
+    display: inline-block;
+    float: right;
+}
+
+call * {
+    text-decoration: none;
+    color: royalblue;
+}
+
+.glider-dot.active {
+    background-color: teal !important;
+    opacity: .7;
+}
+
+.glider-dot:hover {
+    background-color: royalblue !important;
+    opacity: .7;
+}
+
+@media only screen and (max-width:700px) {
+    header {
         padding-left: .5em;
         font-size: 90%;
-    }    
+    }
+    call label {
+        display: none;
+    }
+    slider {
+        height: 12em;
+    }
+    .glider-btn {
+        font-size: 8em !important;
+        top: 13% !important;
+    }
 }
