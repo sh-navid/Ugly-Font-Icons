@@ -196,4 +196,7 @@ call * {
         font-size: 8em !important;
         top: 13% !important;
     }
+    * {
+        user-select: none;
+    }
 }
