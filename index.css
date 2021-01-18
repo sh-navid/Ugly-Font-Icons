@@ -14,7 +14,9 @@
     margin: 0;
 }
 
-body {
+body,
+header,
+container {
     overflow-x: hidden;
 }
 
