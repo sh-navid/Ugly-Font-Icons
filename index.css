@@ -113,6 +113,10 @@ footer {
     background-color: teal;
     display: block;
     height: 7em;
+    line-height: 7em;
+    color: white;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .glider-btn {
