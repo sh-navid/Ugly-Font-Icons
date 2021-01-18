@@ -14,9 +14,14 @@
     margin: 0;
 }
 
-body,
-header,
-container {
+
+/*fix extra white space bug*/
+
+html,
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
     overflow-x: hidden;
 }
 
