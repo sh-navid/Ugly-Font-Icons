@@ -112,9 +112,14 @@ p {
 footer {
     background-color: teal;
     display: block;
-    height: 7em;
-    line-height: 7em;
+    height: 8em;
+    line-height: 8em;
     color: white;
+}
+
+#copy {
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .glider-btn {
