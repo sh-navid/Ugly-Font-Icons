@@ -12,6 +12,10 @@
     font-family: "lFnt";
     padding: 0;
     margin: 0;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 
@@ -172,6 +176,11 @@ call * {
     color: royalblue;
 }
 
+call img {
+    width: 2em;
+    display: inline-block;
+}
+
 .glider-dot.active {
     background-color: teal !important;
     opacity: .7;
@@ -243,8 +252,5 @@ i {
     .glider-btn {
         font-size: 8em !important;
         top: 13% !important;
-    }
-    * {
-        user-select: none;
     }
 }

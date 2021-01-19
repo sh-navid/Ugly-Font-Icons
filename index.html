@@ -37,12 +37,17 @@
     </header>
     <menu>
         <container>
-            <menu-item class="active">Home</menu-item>
-            <menu-item>About</menu-item>
-            <menu-item>Projects</menu-item>
-            <menu-item>Invoice</menu-item>
+            <menu-item id="-Home" class="active">Home</menu-item>
+            <menu-item id="-About">About</menu-item>
+            <menu-item id="-Projects">Projects</menu-item>
+            <menu-item id="-Invoice">Invoice</menu-item>
             <call>
-                <a href="tel:+0000000000000"><span>Call</span><label> +00-000-0000000</label></a>
+                <a href="tel:+0000000000000">
+                    <span>
+                        <img src="image/ico_call.png"/>
+                    </span>
+                    <label> +00-000-0000000</label>
+                </a>
             </call>
         </container>
     </menu>
@@ -59,15 +64,15 @@
 
         <div id="dots"></div>
     </slider>
-    <container>
+    <container class="tag" id="Home">
         <page>
             <h2>Home <span class="active">Page</span></h2>
         </page>
         <content>
-            <h3>As a start</h3>
+            <h3>Start</h3>
             <p>This is the first website I designed after a long time. I tried to keep it simple and clean. I avoided any extra complexity and animations.</p>
             <br />
-            <h3>More details</h3>
+            <h3>More</h3>
             <p>This website is made statically with free and open resources. <a href="https://nickpiscitelli.github.io/Glider.js/">Glider.js</a><sub><a href="https://github.com/NickPiscitelli/Glider.js/blob/master/LICENSE.txt">license</a></sub> library is
                 used for sliders, <a href="https://www.fontsquirrel.com/fonts/Sansation">Sansation</a><sub><a href="https://www.fontsquirrel.com/license/sansation">license</a></sub> is used as main font, and <a href="https://jquery.com/">JQuery</a><sub><a href="https://jquery.org/license/">license</a></sub>                is used to change objects. Images are cropped but their main source is <a href="https://unsplash.com">Unsplash</a><sub><a href="https://unsplash.com/license">license</a></sub>.
             </p>
@@ -78,7 +83,36 @@
                 <i>refer to their own licenses</i>.</p>
             <br />
         </content>
-
+    </container>
+    <container class="tag" id="About">
+        <page>
+            <h2>About <span class="active">Page</span></h2>
+        </page>
+        <content>
+            <h3>About Me</h3>
+            <p>This section is empty.</p>
+            <br />
+        </content>
+    </container>
+    <container class="tag" id="Projects">
+        <page>
+            <h2>Projects <span class="active">Page</span></h2>
+        </page>
+        <content>
+            <h3>Galery</h3>
+            <p>This section is empty.</p>
+            <br />
+        </content>
+    </container>
+    <container class="tag" id="Invoice">
+        <page>
+            <h2>Invoice <span class="active">Page</span></h2>
+        </page>
+        <content>
+            <h3>Information</h3>
+            <p>This section is empty.</p>
+            <br />
+        </content>
     </container>
     <footer>
         <container>
@@ -111,6 +145,8 @@
 
     $(document).ready(function() {
         resize();
+        $(".tag").css("display", "none");
+        $("#Home").css("display", "block");
     });
 
     $(window).resize(function() {
@@ -120,6 +156,15 @@
     setInterval(() => {
         resize();
     }, 1000);
+
+    $("menu-item").on("click", function() {
+        let tagId = $(this).attr("id").replace("-", "");
+        $(".tag").css("display", "none");
+        $("#" + tagId).css("display", "block");
+
+        $("menu-item").removeClass("active");
+        $("#-" + tagId).addClass("active");
+    })
 </script>
 
 </html>
