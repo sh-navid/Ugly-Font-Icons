@@ -201,6 +201,34 @@ i {
     color: deeppink;
 }
 
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: teal;
+}
+
+
+/* Handle on hover */
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: royalblue;
+}
+
 @media only screen and (max-width:700px) {
     header {
         padding-left: .5em;
