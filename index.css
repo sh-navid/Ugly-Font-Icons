@@ -168,11 +168,14 @@ call {
     padding-right: .5em;
     display: inline-block;
     float: right;
-    cursor: pointer;
     position: relative;
 }
 
 call * {
+    cursor: pointer;
+}
+
+call label {
     text-decoration: none;
     color: royalblue;
     display: block;
