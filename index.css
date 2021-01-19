@@ -186,8 +186,9 @@ a {
     color: royalblue;
 }
 
-sub {
+sub * {
     color: seagreen;
+    font-size: 80%;
 }
 
 sub::before {
