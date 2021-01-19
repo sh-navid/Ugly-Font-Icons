@@ -169,16 +169,20 @@ call {
     display: inline-block;
     float: right;
     cursor: pointer;
+    position: relative;
 }
 
 call * {
     text-decoration: none;
     color: royalblue;
+    display: block;
 }
 
 call img {
-    width: 2em;
-    display: inline-block;
+    height: 2em;
+    position: absolute;
+    left: -2em;
+    top: .45em;
 }
 
 .glider-dot.active {
