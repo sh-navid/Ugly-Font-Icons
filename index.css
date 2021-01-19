@@ -184,11 +184,13 @@ call * {
 
 a {
     color: royalblue;
+    text-decoration: none;
 }
 
 sub * {
     color: seagreen;
     font-size: 80%;
+    text-decoration: underline;
 }
 
 sub::before {
