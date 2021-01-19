@@ -198,7 +198,7 @@ sub::before {
 }
 
 i {
-    color: seagreen;
+    color: deeppink;
 }
 
 @media only screen and (max-width:700px) {
