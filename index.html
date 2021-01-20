@@ -74,11 +74,12 @@
             <br />
             <h3>More</h3>
             <p>This website is made statically with free and open resources. <a href="https://nickpiscitelli.github.io/Glider.js/">Glider.js</a><sub><a href="https://github.com/NickPiscitelli/Glider.js/blob/master/LICENSE.txt">license</a></sub> library is
-                used for sliders, <a href="https://www.fontsquirrel.com/fonts/Sansation">Sansation</a><sub><a href="https://www.fontsquirrel.com/license/sansation">license</a></sub> is used as main font, and <a href="https://jquery.com/">JQuery</a><sub><a href="https://jquery.org/license/">license</a></sub>                is used to change objects. Images are cropped but their main source is <a href="https://unsplash.com">Unsplash</a><sub><a href="https://unsplash.com/license">license</a></sub>.
+                used for sliders, <a href="https://www.fontsquirrel.com/fonts/Sansation">Sansation</a><sub><a href="https://www.fontsquirrel.com/license/sansation">license</a></sub> is used as main font, and <a href="https://jquery.com/">JQuery</a><sub><a href="https://jquery.org/license/">license</a></sub>                is used to change objects. Images are cropped but their main source is <a href="https://unsplash.com">Unsplash</a><sub><a href="https://unsplash.com/license">license</a></sub>. <a href="https://openlayers.org/">OpenLayers</a> is used for
+                showing the map.
             </p>
             <br />
             <h3>Location</h3>
-
+            <div id="mapdiv" style="width:100%; height:20em;"></div>
             <br />
             <h3>License</h3>
             <p>This website hosted on <a href="https://github.com/">Github</a> and its codes are <i>open source</i> but <i>not free</i>. Any use of its source code is reserved for its owner only. To use other <i>third party</i> contents used on this website
@@ -167,6 +168,20 @@
         $("menu-item").removeClass("active");
         $("#-" + tagId).addClass("active");
     })
+</script>
+
+<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script>
+    map = new OpenLayers.Map("mapdiv");
+    map.addLayer(new OpenLayers.Layer.OSM());
+    let lonLat = new OpenLayers.LonLat(0, 0).transform(
+        new OpenLayers.Projection("EPSG:4326"),
+        map.getProjectionObject()
+    );
+    let markers = new OpenLayers.Layer.Markers("Markers");
+    map.addLayer(markers);
+    markers.addMarker(new OpenLayers.Marker(lonLat));
+    map.setCenter(lonLat, 3);
 </script>
 
 </html>
