@@ -173,13 +173,13 @@
 
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 <script>
-    var map = L.map('mapdiv').setView([0, 0], 12);
+    var map = L.map('mapdiv').setView([30, 30], 1);
     L.tileLayer('https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' +
             ', Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
         maxZoom: 18
     }).addTo(map);
-    var marker = L.marker([0, 0]).addTo(map);
+    var marker = L.marker([30, 30]).addTo(map);
 </script>
 
 </html>
