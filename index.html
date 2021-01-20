@@ -19,6 +19,8 @@
     <meta name="msapplication-TileColor" content="royalblue">
     <link href="index.css" rel="stylesheet" />
 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
+
     <style type="text/css">
         @-ms-viewport {
             width: auto !important;
@@ -170,18 +172,15 @@
     })
 </script>
 
-<script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
 <script>
-    map = new OpenLayers.Map("mapdiv");
-    map.addLayer(new OpenLayers.Layer.OSM());
-    let lonLat = new OpenLayers.LonLat(0, 0).transform(
-        new OpenLayers.Projection("EPSG:4326"),
-        map.getProjectionObject()
-    );
-    let markers = new OpenLayers.Layer.Markers("Markers");
-    map.addLayer(markers);
-    markers.addMarker(new OpenLayers.Marker(lonLat));
-    map.setCenter(lonLat, 3);
+    var map = L.map('mapdiv').setView([0, 0], 12);
+    L.tileLayer('https://tile.openstreetmap.be/osmbe/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors' +
+            ', Tiles courtesy of <a href="https://geo6.be/">GEO-6</a>',
+        maxZoom: 18
+    }).addTo(map);
+    var marker = L.marker([0, 0]).addTo(map);
 </script>
 
 </html>
