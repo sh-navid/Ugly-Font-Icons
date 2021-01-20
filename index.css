@@ -259,4 +259,8 @@ i {
         font-size: 8em !important;
         top: 13% !important;
     }
+    call img {
+        left: auto;
+        right: .5em;
+    }
 }
