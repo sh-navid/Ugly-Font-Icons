@@ -1,1 +1,1 @@
-# private repository
+# private license - do not copy
